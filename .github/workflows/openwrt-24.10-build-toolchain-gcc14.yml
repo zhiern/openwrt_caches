@@ -1,4 +1,4 @@
-name: openwrt-24.10-gcc13
+name: openwrt-24.10-gcc14
 
 on: workflow_dispatch
 
