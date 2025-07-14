@@ -59,9 +59,9 @@ jobs:
     - name: Create release
       uses: ncipollo/release-action@v1.14.0
       with:
-        name: ${{ matrix.tag.version }}
+        name: openwrt-24.10
         allowUpdates: true
-        tag: ${{ matrix.tag.version }}
+        tag: openwrt-24.10
         commit: openwrt-24.10
         replacesArtifacts: true
         token: ${{ secrets.workflow_token }}
