@@ -51,7 +51,6 @@ jobs:
     - name: Compile Toolchain
       working-directory: /builder
       run: |
-        [ "${{ matrix.libc }}" = "glibc" ] && export ENABLE_GLIBC=y
         BUILD_TOOLCHAIN=y USE_GCC14=y bash <(curl -sS ${{ secrets.script_url_general }}) ${{ matrix.model }}
 
     - name: Create release
