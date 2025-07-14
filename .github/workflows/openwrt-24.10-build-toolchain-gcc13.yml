@@ -50,8 +50,10 @@ jobs:
 
     - name: Compile Toolchain
       working-directory: /builder
+      env:
+        git_name: ${{ secrets.username }}
+        git_password: ${{ secrets.password }}
       run: |
-        [ "${{ matrix.libc }}" = "glibc" ] && export ENABLE_GLIBC=y
         BUILD_TOOLCHAIN=y USE_GCC13=y bash <(curl -sS ${{ secrets.script_url_general }}) ${{ matrix.model }}
 
     - name: Create release
