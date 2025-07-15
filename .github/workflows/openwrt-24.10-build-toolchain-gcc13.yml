@@ -64,5 +64,5 @@ jobs:
         tag: openwrt-24.10
         commit: openwrt-24.10
         replacesArtifacts: true
-        token: ${{ secrets.workflow_token }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         artifacts: ${{ env.WORKDIR }}/openwrt/toolchain-cache/*
